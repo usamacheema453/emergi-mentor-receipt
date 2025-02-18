@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Receipt</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 12px; background-color: #fafafa; color: #333; margin: 0; padding: 0; }
+        .receipt-header { background-color: #222937; color: #fff; padding: 20px; text-align: center; }
+        .receipt-header img { 
+           width: 200px;
+           height: 80px;
+        }
+        .receipt-container { max-width: 700px; margin: 20px auto;  overflow: hidden; }
+        .receipt-header h2 { margin: 0; font-size: 20px; }
+        .receipt-details { padding: 15px; line-height: 1.6; font-size: 14px; }
+        .receipt-table { width: 100%; border-collapse: collapse; margin-top: 15px; padding-left: 8px; }
+        .receipt-table th, .receipt-table td { border: 1px solid #7544f133; padding: 6px; text-align: left; vertical-align: top; background-color: #9578e033; }
+         /* Footer Styling */
+         .receipt-footer {
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 12px;
+            font-size: 13px;
+            color: #555;
+           position: absolute;
+           bottom: 0;
+            width: 100%;
+        }
+        .bundle-list { padding-left: 15px; margin: 0; list-style-type: disc; }
+        thead{
+            
+            background-color:#7544f133 ;
+        }
+        strong{
+            color: #0f0f0f;
+        }
+        .main-title{
+            text-align: center;
+            color: #0f0f0f;
+            font-weight: 500;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt-header">
+        <img  src="{{logoPath}}" alt="Company Logo">
+        
+    </div>
+
+    <div class="main-title">
+        <h1 style="padding-top: 5px; color: #7544f1;">Purchase Receipt</h1>
+        <p>Date: {{purchaseDate}}</p>
+    </div>
+    <div class="receipt-container">
+        
+
+        <div class="receipt-details">
+            <p><strong>Mentee:</strong> {{menteeName}}</p>
+            <p><strong>Mentor:</strong> {{mentorName}}</p>
+            <p><strong>Mentor Position:</strong> {{mentorTitle}}</p>
+            <p><strong>Transaction ID:</strong> {{transactionId}}</p>
+        </div>
+
+      
+            <table class="receipt-table" >
+                <thead >
+                    <tr><th>Session</th><th>Title</th></tr>                
+                </thead>
+                <tbody>
+                    <tr>{{productRows}}</tr>
+                </tbody>
+             
+            </table>
+    
+            <h3 style="padding-left:6px; margin-top: 30px;">Pricing Details</h3>
+    
+          
+            <table class="receipt-table" style="margin-top: 10px;">
+                <thead class="background-color: #f3f3f3">
+                    <tr><th>Description</th><th>Amount</th></tr>
+                </thead>
+                <tbody>
+                    
+                    <tr><td>Base Amount</td><td>${{amount}}</td></tr>
+                    <tr><td>Service Charge (20%)</td><td>${{serviceCharge}}</td></tr>
+                    <tr><td>GST (10%)</td><td>${{gst}}</td></tr>
+                    <tr><td><strong>Total</strong></td><td><strong>${{totalAmount}}</strong></td></tr>
+                </tbody>
+            </table>
+       
+
+       
+    </div>
+    <div class="receipt-footer">
+        <p>Thank you for your purchase!</p>
+    </div>
+</body>
+</html>
