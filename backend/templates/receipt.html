@@ -51,16 +51,16 @@
 
     <div class="main-title">
         <h1 style="padding-top: 5px; color: #7544f1;">Purchase Receipt</h1>
-        <p>Date: {{purchaseDate}}</p>
+        <p>Date: 26-02-2025</p>
     </div>
     <div class="receipt-container">
         
 
         <div class="receipt-details">
-            <p><strong>Mentee:</strong> {{menteeName}}</p>
-            <p><strong>Mentor:</strong> {{mentorName}}</p>
-            <p><strong>Mentor Position:</strong> {{mentorTitle}}</p>
-            <p><strong>Transaction ID:</strong> {{transactionId}}</p>
+            <p><strong>Mentee:</strong> John Doe</p>
+            <p><strong>Mentor:</strong>Jane Smith</p>
+            <p><strong>Mentor Position:</strong> Senior Data Analyst</p>
+            <p><strong>Transaction ID:</strong> TXN123456</p>
         </div>
 
       
@@ -70,6 +70,12 @@
                 </thead>
                 <tbody>
                     <tr>{{productRows}}</tr>
+                    <tr><td>1:1 Connect</td><td>Full Stack Coaching</td></tr>
+                    <tr><td>Digital Assets</td><td>Web Dev eBook</td></tr>
+                    <tr><td>Bundle</td><td><ul>
+                        <li>Full Stack Coaching</li>
+                        <li>Mobile App PDf Course</li>
+                    </ul></td></tr>
                 </tbody>
              
             </table>
@@ -83,10 +89,10 @@
                 </thead>
                 <tbody>
                     
-                    <tr><td>Base Amount</td><td>${{amount}}</td></tr>
-                    <tr><td>Service Charge (20%)</td><td>${{serviceCharge}}</td></tr>
-                    <tr><td>GST (10%)</td><td>${{gst}}</td></tr>
-                    <tr><td><strong>Total</strong></td><td><strong>${{totalAmount}}</strong></td></tr>
+                    <tr><td>Base Amount</td><td>30</td></tr>
+                    <tr><td>Service Charge (20%)</td><td>8</td></tr>
+                    <tr><td>GST (10%)</td><td>5</td></tr>
+                    <tr><td><strong>Total</strong></td><td><strong>43</strong></td></tr>
                 </tbody>
             </table>
        
